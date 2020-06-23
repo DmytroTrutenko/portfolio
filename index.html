@@ -6,9 +6,8 @@
     <link rel="shortcut icon" href="img/faviconVersion2.ico">
     <title>Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
 <header class="header">
@@ -17,23 +16,53 @@
             <a href="#"><img src="img/DTlogoVersion2black.png" alt="logo"></a>
         </div>
         <ul id="main-nav" class="main-nav d-flex">
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">About me</a></li>
-            <li><a href="#">What i do</a></li>
-            <li><a href="#">Testimonials</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#" class="nav">Portfolio</a></li>
+            <li><a href="#" class="nav">About me</a></li>
+            <li><a href="#" class="nav">What i do</a></li>
+            <li><a href="#" class="nav">Testimonials</a></li>
+            <li><a href="#" class="nav">Contact</a></li>
             <li><a href="docs/CV-Online-eng-DmitryTrutenko.pdf" class="btn">View CV</a></li>
         </ul>
-
     </div>
 </header>
 <main class="main">
     <section id="main-screen" class="main-screen">
+        <div class="container">
+            <div class="main-screen__items d-flex">
+                <div class="info d-flex">
+                    <h1 class="banner_title">Dmitry Trutenko</h1>
+                    <ul class="my_skills">
+                        <li>Front-end Developer</li>
+                        <li>UX/UI design</li>
+                        <li>Graphic design</li>
+                    </ul>
+                </div>
 
+                <div class="img">
+                    <img src="img/ava.png" alt="img">
+                </div>
+            </div>
+        </div>
+        <div class="main-screen_social">
+            <ul class="socials">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-github"></i></a></li>
+                <li><a href="#"><i class="fab fa-google"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="#"><i class="fab fa-vk"></i></a></li>
+            </ul>
+        </div>
+        <div class="scroll_down">
+            <a href="#">Scroll Down</a>
+        </div>
     </section>
 </main>
 <footer class="footer">
 
 </footer>
+
+<script src="font-awesome/fontawesome-all.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
