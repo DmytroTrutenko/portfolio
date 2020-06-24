@@ -22,10 +22,36 @@ body {
 
   h1 {
     margin: 0;
+    color: #fff;
   }
 
-  h1 {
+  h2 {
     color: #fff;
+    font-size: 90px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 63px;
+    position: relative;
+
+    &:before {
+      content: '<';
+      position: absolute;
+      color: #ff3366;
+      left: -50px;
+    }
+  }
+
+  .bg_text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .lang {
+    padding: 5px;
+    outline: none;
   }
 
   ul {
@@ -47,31 +73,6 @@ section {
   margin-right: auto;
   margin-left: auto;
 }
-
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1284px;
-  }
-}
-
 
 .header {
   position: fixed;
@@ -221,7 +222,7 @@ section {
       img {
         display: block;
         object-fit: contain;
-        transform: scale(1.2) translateX(-100px);
+        transform: scale(0.4) translateX(-50px);
         opacity: 0.4;
       }
     }
@@ -333,10 +334,28 @@ section {
 }
 
 .about_me-screen {
-  padding: 240px 0;
+  padding: 150px 0;
   background: #fff;
   position: relative;
   z-index: 10;
+
+  h2 {
+    color: #333;
+  }
+
+  h4 {
+    color: #171819;
+    font-size: 35px;
+    line-height: 65px;
+    font-weight: 500;
+  }
+
+  .about_me-screen__items {
+    position: relative;
+    z-index: 1;
+    padding-left: 215px;
+  }
+
 }
 
 .i_do-screen {
@@ -344,11 +363,44 @@ section {
   background: #171819;
   position: relative;
   z-index: 10;
+
+  h2 {
+    color: #999999;
+  }
+
+  .i_do-screen__items {
+    position: relative;
+    z-index: 1;
+    padding-left: 215px;
+  }
+
+  .bg_text {
+    top: -320px;
+    left: -150px;
+  }
 }
 
 .contact-screen {
   background: #fff;
   padding: 130px 0 35px;
+  z-index: 10;
+  position: relative;
+
+  h2 {
+    color: #333;
+    z-index: 2;
+  }
+
+  .contact-screen__items {
+    position: relative;
+    z-index: 1;
+    padding-left: 215px;
+  }
+
+  .bg_text {
+    top: -380px;
+    left: -274px;
+  }
 }
 
 .footer {
@@ -423,5 +475,32 @@ section {
     }
   }
 }
+
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1284px;
+  }
+}
+
+
 
 

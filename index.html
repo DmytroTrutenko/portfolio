@@ -10,22 +10,31 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
 <header class="header">
     <div class="container d-flex">
         <div class="logo">
             <a href="#"><img src="img/DTlogoVersion2black.png" alt="logo"></a>
         </div>
         <ul id="main-nav" class="main-nav d-flex">
-            <li><a href="#" class="nav">Portfolio</a></li>
-            <li><a href="#" class="nav">About me</a></li>
-            <li><a href="#" class="nav">What I do</a></li>
-            <li><a href="#" class="nav">Contact</a></li>
-            <li><a href="#" class="nav">Language</a></li>
+            <li><a href="#portfolio-screen" class="nav">Portfolio</a></li>
+            <li><a href="#about_me-screen" class="nav">About me</a></li>
+            <li><a href="#i_do-screen" class="nav">What I do</a></li>
+            <li><a href="#contact-screen" class="nav">Contact</a></li>
+            <li>
+                <select class="lang">
+                    <option value="eng">English</option>
+                    <option value="ru">Русский</option>
+                    <option value="esst">Eesti</option>
+                </select>
+            </li>
             <li><a href="docs/CV-Online-eng-DmitryTrutenko.pdf" class="btn">View CV</a></li>
         </ul>
     </div>
 </header>
+
 <main class="main">
+
     <section id="main-screen" class="main-screen">
         <div class="container">
             <div class="main-screen__items d-flex">
@@ -37,9 +46,8 @@
                         <li>Graphic design</li>
                     </ul>
                 </div>
-
                 <div class="img">
-                    <img src="img/ava.png" alt="img">
+                    <img src="img/ava2.png" alt="img">
                 </div>
             </div>
         </div>
@@ -53,9 +61,10 @@
             </ul>
         </div>
         <div class="scroll_down">
-            <a href="#">Scroll Down</a>
+            <a href="#portfolio-screen">Scroll Down</a>
         </div>
     </section>
+
     <section id="portfolio-screen" class="portfolio-screen">
         <div class="container">
             <div class="portfolio-screen__items">
@@ -63,28 +72,46 @@
             </div>
         </div>
     </section>
+
     <section id="about_me-screen" class="about_me-screen">
         <div class="container">
+            <h2>About Me</h2>
             <div class="about_me-screen__items">
-                <h1 class="bg_h1_white">About</h1>
+                <div class="bg_text">
+                    <h1 class="bg_h1_white">About</h1>
+                </div>
+                <h4>I'm Dmitry. I prefer to keep learning, continue challenging myself, and do interesting things that matter.
+                    I’m a fast learner, able to pick up new skills and juggle different projects and roles with relative ease. I like to develop
+                    expertise in a number of areas over the course of my life and career.
+                    Feel free to get in touch by any means of communication.</h4>
             </div>
         </div>
     </section>
+
     <section id="i_do-screen" class="i_do-screen">
         <div class="container">
+            <h2>What I do</h2>
             <div class="i_do-screen__items">
-                <h1 class="bg_h1_black">What I do</h1>
+                <div class="bg_text">
+                    <h1 class="bg_h1_black">What I do</h1>
+                </div>
             </div>
         </div>
     </section>
+
     <section id="contact-screen" class="contact-screen">
         <div class="container">
+            <h2>Contact</h2>
             <div class="contact-screen__items">
-                <h1 class="bg_h1_white">Contact</h1>
+                <div class="bg_text">
+                    <h1 class="bg_h1_white">Contact</h1>
+                </div>
             </div>
         </div>
     </section>
+
 </main>
+
 <footer class="footer">
     <div class="container">
         <div class="footer_items d-flex">
