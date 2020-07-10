@@ -73,6 +73,10 @@ section {
   margin-left: auto;
 }
 
+header {
+  transition: all 0.5s ease-out;
+}
+
 .header {
   position: fixed;
   width: 100%;
