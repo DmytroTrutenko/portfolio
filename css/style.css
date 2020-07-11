@@ -563,6 +563,7 @@ header {
 .portfolio-screen .portfolio_items .portfolio_item .port_img {
   width: 550px;
   height: 320px;
+  perspective: 500px;
 }
 .portfolio-screen .portfolio_items .portfolio_item .port_img img {
   opacity: 0.5;
