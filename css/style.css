@@ -344,8 +344,8 @@ header {
   background-color: #ff3366;
 }
 .lang .main_lang {
-  height: 20px !important;
-  width: 30px !important;
+  height: 20px;
+  width: 30px;
 }
 
 .scroll_down {
