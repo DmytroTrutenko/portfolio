@@ -379,6 +379,8 @@ header {
   li {
     padding: 1px;
     background-color: #848892;
+    height: 15px;
+    width: 25px;
 
     margin-bottom: 15px;
     transition: all 0.3s ease-out;
@@ -390,9 +392,8 @@ header {
     a {
       display: block;
       overflow: hidden;
-      height: 15px;
-      width: 25px;
-
+      height: 100%;
+      width: 100%;
 
       img {
         height: 100%;
@@ -403,9 +404,12 @@ header {
     }
 
     &:hover {
-
       background-color: #ff3366;
     }
+  }
+  .main_lang{
+    height: 20px!important;
+    width: 30px!important;
   }
 }
 
