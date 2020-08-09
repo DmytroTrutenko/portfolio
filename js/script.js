@@ -1,14 +1,19 @@
 $(document).ready(function () {
-    //делаюю хедер белый при скроле и обратно
+
+    //делаюю хедер белый при скроле и обратно, и кнопка го топ
     $(window).scroll(function () {
         if ($(this).scrollTop() > 1) {
             $('#header').addClass('header_scroll');
             $('#header').removeClass('header');
+            $('#go_top').addClass('active_gotop');
         } else {
             $('#header').removeClass('header_scroll');
             $('#header').addClass('header');
+            $('#go_top').removeClass('active_gotop');
         }
     });
+
+
     //плавный переход между якорями
     $("#main-nav li:not(:last-child)").on("click", "a", function (event) {
         event.preventDefault();

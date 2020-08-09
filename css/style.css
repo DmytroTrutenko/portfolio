@@ -58,6 +58,36 @@ section {
   overflow: hidden;
 }
 
+.go_top {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 1111;
+  transition: all 0.3s ease-out;
+}
+.go_top a {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #ff3366;
+  border-radius: 50%;
+  font-size: 22px;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+}
+.go_top a:hover {
+  background: #fff;
+  color: #ff3366;
+}
+
+.active_gotop {
+  display: block;
+}
+
 .container {
   width: 100%;
   padding-right: 15px;
@@ -318,34 +348,28 @@ header {
   right: 25px;
 }
 .lang li {
-  padding: 1px;
-  background-color: #848892;
-  height: 15px;
-  width: 25px;
+  display: block;
+  width: 35px;
+  height: 20px;
   margin-bottom: 15px;
-  transition: all 0.3s ease-out;
 }
 .lang li:last-child {
   margin-bottom: 0;
 }
 .lang li a {
+  transition: all 0.3s ease-out;
+  color: #ffffff;
+  text-decoration: none;
   display: block;
   overflow: hidden;
   height: 100%;
   width: 100%;
 }
-.lang li a img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  display: block;
+.lang li a:hover {
+  color: #ff3366;
 }
-.lang li:hover {
-  background-color: #ff3366;
-}
-.lang .main_lang {
-  height: 20px;
-  width: 30px;
+.lang .active {
+  display: none;
 }
 
 .scroll_down {
