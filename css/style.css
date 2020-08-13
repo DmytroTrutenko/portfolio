@@ -195,6 +195,15 @@ header {
   background: url("../img/DTlogoVersion2white.png") center center no-repeat;
   background-size: contain;
 }
+.header_scroll .burger_btn span {
+  background-color: #000;
+}
+.header_scroll .burger_btn span:before {
+  background-color: #000;
+}
+.header_scroll .burger_btn span:after {
+  background-color: #000;
+}
 .header_scroll .main-nav li {
   margin-right: 50px;
   display: flex;
@@ -301,6 +310,7 @@ header {
   font-size: 20px;
   line-height: 40px;
   letter-spacing: 2px;
+  padding-left: 20px;
 }
 .main .main-screen .info .my_skills li:before {
   content: "<";
@@ -308,7 +318,7 @@ header {
   font-weight: 500;
   font-size: 25px;
   position: absolute;
-  left: -15px;
+  left: 0;
   top: 1px;
 }
 .main .main-screen .info .my_skills li:last-child {
@@ -349,7 +359,7 @@ header {
 }
 .lang li {
   display: block;
-  width: 35px;
+  width: 20px;
   height: 20px;
   margin-bottom: 15px;
 }
@@ -759,6 +769,69 @@ header {
   text-decoration: underline;
 }
 
+.burger_btn {
+  display: none;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 200;
+  position: relative;
+}
+.burger_btn.active span {
+  width: 20px;
+  transform: translateY(6px) rotate(45deg);
+}
+.burger_btn.active span:before {
+  opacity: 0;
+}
+.burger_btn.active span:after {
+  width: 20px;
+  transform: translateY(-6px) rotate(-90deg);
+}
+.burger_btn span {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #ffffff;
+  transition: all 0.4s ease-out;
+}
+.burger_btn span:before {
+  transition: all 0.4s ease-out;
+  position: absolute;
+  content: "";
+  right: 0;
+  top: -6px;
+  width: 15px;
+  height: 2px;
+  background-color: #ffffff;
+}
+.burger_btn span:after {
+  transition: all 0.4s ease-out;
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 6px;
+  width: 25px;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.menu_wrap.active {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block !important;
+  width: 100%;
+  height: 100vh;
+  z-index: 199;
+}
+.menu_wrap.active .main-nav {
+  flex-direction: column;
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
@@ -777,6 +850,72 @@ header {
 @media (min-width: 1200px) {
   .container {
     max-width: 1284px;
+  }
+}
+@media (max-width: 1400px) {
+  .main .main-screen {
+    padding: 140px 60px 50px;
+  }
+
+  .main .main-screen .info .my_skills li {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+
+  .main .main-screen .info .banner_title {
+    font-size: 130px;
+  }
+}
+@media (max-width: 1999px) {
+  .main .main-screen .info .my_skills li {
+    margin-right: 8px;
+  }
+
+  .main .main-screen .info .banner_title {
+    font-size: 120px;
+  }
+
+  .main .main-screen .info .my_skills li {
+    padding-left: 15px;
+  }
+}
+@media (max-width: 991px) {
+  .main .main-screen .info .banner_title {
+    font-size: 80px;
+    line-height: 1.2;
+  }
+
+  .main .main-screen .info .my_skills {
+    flex-direction: column;
+  }
+
+  .main-screen_social {
+    display: none;
+  }
+
+  .scroll_down {
+    display: none;
+  }
+
+  .main .main-screen {
+    padding: 140px 0 50px;
+  }
+}
+@media (max-width: 767px) {
+  .menu_wrap {
+    display: none !important;
+  }
+
+  .burger_btn {
+    display: flex;
+  }
+
+  .lang {
+    display: none;
+  }
+
+  .main .main-screen .img img {
+    transform: scale(3.7) translateX(-15px);
   }
 }
 

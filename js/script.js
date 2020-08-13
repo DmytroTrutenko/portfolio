@@ -40,7 +40,7 @@ $(document).ready(function () {
         var scrollCoef = 0.5;
 
         $('.bg_text_port').css({
-            left:  50 + $(window).scrollTop() * scrollCoef,
+            left: 50 + $(window).scrollTop() * scrollCoef,
             transition: "all " + 1.5 + "s" + " ease-out"
         })
     });
@@ -49,7 +49,7 @@ $(document).ready(function () {
         var scrollCoef = 0.07;
 
         $('.bg_text_about').css({
-            left:  50 - $(window).scrollTop() * scrollCoef,
+            left: 50 - $(window).scrollTop() * scrollCoef,
             transition: "all " + 0.5 + "s" + " ease-out"
         })
     });
@@ -58,7 +58,7 @@ $(document).ready(function () {
         var scrollCoef = 0.05;
 
         $('.bg_text_ido').css({
-            left:  -150 + $(window).scrollTop() * scrollCoef,
+            left: -150 + $(window).scrollTop() * scrollCoef,
             transition: "all " + 0.5 + "s" + " ease-out"
         })
     });
@@ -93,5 +93,11 @@ $(document).ready(function () {
         return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
     }
 
+    //бургер меню
+
+    $(".burger_btn").on("click", function (event) {
+        $(this).toggleClass('active');
+        $(".menu_wrap").toggleClass('active');
+    });
 });
 

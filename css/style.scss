@@ -73,6 +73,7 @@ section {
   right: 50px;
   z-index: 1111;
   transition: all 0.3s ease-out;
+
   a {
     display: flex;
     width: 40px;
@@ -85,15 +86,18 @@ section {
     font-size: 22px;
     overflow: hidden;
     transition: all 0.3s ease-out;
-    &:hover{
+
+    &:hover {
       background: #fff;
       color: #ff3366;
     }
   }
 }
-.active_gotop{
+
+.active_gotop {
   display: block;
 }
+
 .container {
   width: 100%;
   padding-right: 15px;
@@ -213,6 +217,20 @@ header {
       height: 70px;
       background: url("../img/DTlogoVersion2white.png") center center no-repeat;
       background-size: contain;
+    }
+  }
+
+  .burger_btn {
+    span {
+      background-color: #000;
+
+      &:before {
+        background-color: #000;
+      }
+
+      &:after {
+        background-color: #000;
+      }
     }
   }
 
@@ -343,6 +361,7 @@ header {
           font-size: 20px;
           line-height: 40px;
           letter-spacing: 2px;
+          padding-left: 20px;
 
           &:before {
             content: '<';
@@ -350,7 +369,7 @@ header {
             font-weight: 500;
             font-size: 25px;
             position: absolute;
-            left: -15px;
+            left: 0;
             top: 1px;
           }
 
@@ -407,7 +426,7 @@ header {
 
   li {
     display: block;
-    width: 35px;
+    width: 20px;
     height: 20px;
     margin-bottom: 15px;
 
@@ -898,6 +917,80 @@ header {
   }
 }
 
+.burger_btn {
+  display: none;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 200;
+  position: relative;
+
+  &.active {
+    span {
+      width: 20px;
+      transform: translateY(6px) rotate(45deg);
+
+      &:before {
+        opacity: 0;
+      }
+
+      &:after {
+        width: 20px;
+        transform: translateY(-6px) rotate(-90deg);
+      }
+    }
+  }
+
+  span {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all 0.4s ease-out;
+
+    &:before {
+      transition: all 0.4s ease-out;
+      position: absolute;
+      content: '';
+      right: 0;
+      top: -6px;
+      width: 15px;
+      height: 2px;
+      background-color: #ffffff;
+    }
+
+    &:after {
+      transition: all 0.4s ease-out;
+      position: absolute;
+      content: '';
+      right: 0;
+      top: 6px;
+      width: 25px;
+      height: 2px;
+      background-color: #ffffff;
+    }
+  }
+}
+
+.menu_wrap {
+  &.active {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block!important;
+    width: 100%;
+    height: 100vh;
+    z-index: 199;
+
+    .main-nav {
+      flex-direction: column;
+    }
+  }
+}
+
 
 @media (min-width: 576px) {
   .container {
@@ -924,5 +1017,66 @@ header {
 }
 
 
+@media (max-width: 1400px) {
+  .main .main-screen {
+    padding: 140px 60px 50px;
+  }
+  .main .main-screen .info .my_skills li {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  .main .main-screen .info .banner_title {
+    font-size: 130px;
+  }
+}
 
+@media (max-width: 1999px) {
+  .main .main-screen .info .my_skills li {
+    margin-right: 8px;
+  }
+  .main .main-screen .info .banner_title {
+    font-size: 120px;
+  }
+  .main .main-screen .info .my_skills li {
+    padding-left: 15px;
+  }
+}
 
+@media (max-width: 991px) {
+
+  .main .main-screen .info .banner_title {
+    font-size: 80px;
+    line-height: 1.2;
+  }
+  .main .main-screen .info .my_skills {
+    flex-direction: column;
+  }
+  .main-screen_social {
+    display: none;
+  }
+  .scroll_down {
+    display: none;
+  }
+  .main .main-screen {
+    padding: 140px 0 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu_wrap {
+    display: none !important;
+  }
+  .burger_btn {
+    display: flex;
+  }
+  .lang {
+    display: none;
+  }
+  .main .main-screen .img img {
+    transform: scale(3.7) translateX(-15px);
+  }
+}
+
+@media (max-width: 575px) {
+
+}
