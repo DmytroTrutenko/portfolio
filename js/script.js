@@ -99,5 +99,10 @@ $(document).ready(function () {
         $(this).toggleClass('active');
         $(".menu_wrap").toggleClass('active');
     });
+    $(".menu_wrap a").on("click", function (event) {
+        setTimeout(function() {
+            $(".menu_wrap").toggleClass('active');
+        }, 600);
+    });
 });
 
