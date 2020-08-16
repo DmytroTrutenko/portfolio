@@ -15,7 +15,7 @@ $(document).ready(function () {
 
 
     //плавный переход между якорями
-    $("#main-nav li:not(:last-child)").on("click", "a", function (event) {
+    $("#main-nav li:not(.notli)").on("click", "a", function (event) {
         event.preventDefault();
         var id = $(this).attr('href'),
             top = $(id).offset().top;

@@ -452,6 +452,39 @@ header {
   position: relative;
   z-index: 2;
 }
+.portfolio-screen .btn {
+  margin: 0 auto;
+  border: 2px solid #ff3366;
+  color: #ffff;
+  padding: 3px 40px;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 40px;
+  position: relative;
+  overflow: hidden;
+  width: 214px;
+  display: block;
+}
+.portfolio-screen .btn:before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  background-color: #ff3366;
+  transform: skewX(-35deg);
+  top: 0;
+  left: -315px;
+  z-index: -1;
+  transition: all 0.5s ease-out;
+}
+.portfolio-screen .btn:hover:before {
+  left: -15px;
+}
+.portfolio-screen .btn:hover {
+  color: #ffffff;
+}
 .portfolio-screen .bg_text {
   top: 15px;
   left: 50px;
