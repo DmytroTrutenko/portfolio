@@ -881,6 +881,10 @@ header {
   margin-top: 80px;
 }
 
+.portfolio-screen2 {
+  padding-top: 300px;
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
@@ -1027,6 +1031,14 @@ header {
   .i_do-screen .tab-content .tab_items .tab_item {
     margin-bottom: 37px;
   }
+
+  .portfolio-screen2 {
+    padding-top: 220px;
+  }
+
+  .portfolio-screen2 .bg_text {
+    top: 85px;
+  }
 }
 @media (max-width: 767px) {
   .menu_wrap {
@@ -1108,11 +1120,15 @@ header {
   }
 
   .portfolio-screen {
-    padding: 50px 0 30px;
+    padding: 85px 0 30px;
   }
 
   .go_top {
     display: none;
+  }
+
+  .portfolio-screen2 {
+    padding-top: 150px;
   }
 }
 @media (max-width: 575px) {
@@ -1160,8 +1176,13 @@ header {
   }
 
   .portfolio-screen .portfolio_items .portfolio_item .port_info p {
-    font-size: 10px;
-    margin-top: 0;
+    font-size: 9px;
+    margin-top: 5px;
+    line-height: 20px;
+  }
+
+  .portfolio-screen2 {
+    padding-top: 115px;
   }
 }
 @media (max-width: 420px) {
